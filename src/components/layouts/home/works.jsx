@@ -18,7 +18,7 @@ export default function Works({ showDay }) {
     },
     {
       name: 'Kasih Karunia Kekal',
-      logo: '../../assets/KKK.png',
+      logo: '../assets/KKK.png',
       position: 'Field Engineer',
       period: '2021–2022',
     },
