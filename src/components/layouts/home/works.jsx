@@ -26,7 +26,7 @@ export default function Works({ showDay }) {
 
   return (
     <div
-      className={`relative flex flex-col justify-between items-center z-20 py-20 text-[#222222] font-micro transition-all duration-1000 ease-in-out
+      className={`relative flex flex-col justify-between items-center z-20 py-20 text-[#c6c6c6] font-micro transition-all duration-1000 ease-in-out
         ${showDay ? '-top-1/7 sm:-top-1/3 pointer-events-auto' : 'top-9/10 pointer-events-auto'}`}
     >
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold text-center -mb-2 sm:-mb-4 md:-mb-6 lg:-mb-8">MY PREV COMPANIES</h1>
