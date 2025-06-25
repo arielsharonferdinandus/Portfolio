@@ -7,7 +7,7 @@ export default function LoadingScreen() {
       className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${loadingBg})` }}
     >
-      <img src={loadingGif} alt="Loading..." className="w-100 h-106" />
+      <img src={loadingGif} alt="Loading..." className="w-50 sm:w-100 h-53 sm:h-106" />
     </div>
   );
 }

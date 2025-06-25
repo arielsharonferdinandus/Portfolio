@@ -43,17 +43,17 @@ export default function Carousel({ showDay }) {
 
   return (
     <div className={`w-full bg-[#3c3c3c] border-t-4 border-r-4 border-b-4 border-l-4 border-t-[#585858] border-r-[#585858] border-b-[#1b1b1b] border-l-[#1b1b1b] h-1/4 overflow-hidden select-none z-20 relative flex justify-between items-center transition-all duration-1000 ease-in-out
-        ${showDay ? 'bottom-[-25%]' : 'bottom-[63%]'}`}>
-      <div className="text-white mb-5 mt-5 px-8 font-micro min-w-1/4 z-30 bg-[#3c3c3c]">
-        <h2 className="text-8xl font-bold tracking-widest">MY WORKS</h2>
-        <p className="text-xl mt-2 max-w-2xl">
+        ${showDay ? 'bottom-[-25%]' : 'bottom-2/5 sm:bottom:1/4 md:bottom-1/2 lg:bottom-2/3'}`}>
+      <div className="text-white h-[100%] px-3 md:px-8 font-micro min-w-3/5 sm:min-w-1/2 md:min-w-1/3 lg:min-w-1/4 z-30 bg-[#3c3c3c] py-7 sm:py-5">
+        <h2 className="text-4xl lg:text-8xl font-bold tracking-widest">MY WORKS</h2>
+        <p className="text-xs sm:text-sm md:text-lg lg:text-xl mt-1 sm:mt-2 max-w-2xl">
           Here are some examples of my work in graphic design. I've been passionate about graphic design since vocational high school, and I have a strong desire to learn more about UI/UX design.
         </p>
       </div>
 
       <div
         ref={containerRef}
-        className="flex flex-row gap-6 whitespace-nowrap will-change-transform w-full"
+        className="flex flex-row gap-3 sm:gap-4 md:gap-6 whitespace-nowrap will-change-transform w-full"
         style={{
           animation: `slide-loop 40s linear infinite`,
           "--slide-distance": `-${trackWidth}px`,
@@ -63,11 +63,11 @@ export default function Carousel({ showDay }) {
         onMouseLeave={() => setIsHovered(false)}
       >
         {[...Array(2)].map((_, i) => (
-          <div className="carousel-set flex flex-row gap-6" key={i}>
+          <div className="carousel-set flex flex-row gap-3 sm:gap-4 md:gap-6" key={i}>
             {items.map((item) => (
               <div
                 key={`${i}-${item.id}`}
-                className="group relative min-w-[180px] h-[180px] bg-white rounded overflow-hidden"
+                className="group relative w-[130px] sm:w-[160px] md:w-[180px] h-[130px] sm:h-[160px] md:h-[180px] bg-white rounded overflow-hidden"
               >
                 <img
                   src={item.image}
