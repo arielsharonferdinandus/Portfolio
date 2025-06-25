@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import Karo1 from '../../assets/TC.jpg';
-import Karo2 from '../../assets/JF.jpg';
-import Karo3 from '../../assets/MM.jpg';
-import Karo4 from '../../assets/RL.jpg';
-import Karo5 from '../../assets/KD.jpg';
-import Karo6 from '../../assets/TF.jpg';
-import Karo7 from '../../assets/FG.jpg';
-import Karo8 from '../../assets/OP.jpg';
+import Karo1 from '/TC.jpg';
+import Karo2 from '/JF.jpg';
+import Karo3 from '/MM.jpg';
+import Karo4 from '/RL.jpg';
+import Karo5 from '/KD.jpg';
+import Karo6 from '/TF.jpg';
+import Karo7 from '/FG.jpg';
+import Karo8 from '/OP.jpg';
 
 const items = [
   { id: 1, title: 'Reckless', image: Karo4 },

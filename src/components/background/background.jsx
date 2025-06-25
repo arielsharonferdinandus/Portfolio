@@ -1,8 +1,8 @@
 import { useDayNight } from '../../contexts/DayNightContext';
-import Moon from '../../assets/Moon.svg';
-import Night from '../../assets/Night.jpg';
-import Ground from '../../assets/Ground.svg';
-import Day from '../../assets/Day.jpg';
+import Moon from '/Moon.svg';
+import Night from '/Night.jpg';
+import Ground from '/Ground.svg';
+import Day from '/Day.jpg';
 import Navbar from '../navbar/navbar';
 import About from '../layouts/home/about';
 import Works from '../layouts/home/works';

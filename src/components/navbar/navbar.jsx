@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import Contact from '../../assets/Contact.svg';
+import Contact from '/Contact.svg';
 
 export default function Navbar({ showDay }) {
   const navigate = useNavigate();

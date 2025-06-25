@@ -1,5 +1,5 @@
-import loadingGif from '../../assets/loading.gif';
-import loadingBg from '../../assets/loading_bg.png';
+import loadingGif from '/loading.gif';
+import loadingBg from '/loading_bg.png';
 
 export default function LoadingScreen() {
   return (

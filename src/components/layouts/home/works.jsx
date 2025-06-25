@@ -4,21 +4,21 @@ export default function Works({ showDay }) {
   const companies = [
     {
       name: 'Perkom Indah Murni',
-      logo: '../../assets/PIM.png',
+      logo: '/PIM.png',
       position: 'Managed Service',
       period: '2024–Present',
 
     },
     {
       name: 'Medicalogy.com',
-      logo: '../../assets/Medicalogy.png',
+      logo: '/Medicalogy.png',
       position: 'Graphic Designer',
       period: '2022–2024',
 
     },
     {
       name: 'Kasih Karunia Kekal',
-      logo: '../assets/KKK.png',
+      logo: '/KKK.png',
       position: 'Field Engineer',
       period: '2021–2022',
     },
