@@ -17,7 +17,7 @@ export default function About({ showDay }) {
         Manage Service | Graphic Design | UI/UX
       </p>
       <p className="
-        text-md sm:text-2xl md:text-4xl lg:text-5xl -mb-2
+        text-md sm:text-2xl md:text-4xl lg:text-5xl -mb-8
         text-[#222222] hover:text-[#ededed] 
         duration-300 mt-4 max-w-full sm:max-w-[90%] md:max-w-[60%] lg:max-w-[39%]
       ">
