@@ -64,7 +64,7 @@ export default function Background() {
       {/* Ground */}
       <div
         className="
-          absolute bottom-0 w-full h-24 sm:h-34 md:h-44 
+          absolute bottom-0 w-full h-24 sm:h-32 md:h-40 
           bg-cover bg-repeat-x animate-ground-move z-30
         "
         style={{ backgroundImage: `url(${Ground})` }}
