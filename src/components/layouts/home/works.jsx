@@ -36,7 +36,7 @@ export default function Works({ showDay }) {
         {companies.map((company, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-center text-center bg-[#4f4f4f] border-t-4 border-r-4 border-b-4 border-l-4 border-t-[#585858] border-r-[#585858] border-b-[#1b1b1b] border-l-[#1b1b1b] p-2 sm:p-4 md:p-6 lg:p-8 rounded-s max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl w-full">
+            className="flex flex-col items-center text-center bg-[#222]/40 border-t-4 border-r-4 border-b-4 border-l-4 border-b-[#585858] border-l-[#585858] border-t-[#1b1b1b] border-r-[#1b1b1b] p-2 sm:p-4 md:p-6 lg:p-8 rounded-s max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl w-full">
             <img src={company.logo} alt={company.name} className="w-20 sm:w-40 h-20 sm:h-40 object-contain mb-4 overflow-hidden duration-300 hover:scale-125" />
             <h3 className="text-xs sm:text-xl md:text-2xl lg:text-5xl font-bold">{company.name}</h3>
             <h4 className="text-xs sm:text-xl md:text-2xl lg:text-3xl">{company.position}</h4>
