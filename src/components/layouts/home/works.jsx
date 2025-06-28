@@ -35,7 +35,7 @@ export default function Works({ showDay }) {
       <div className="flex gap-2 sm:gap-3 md:gap-6 items-center text-white w-8/9 sm:w-1/2 md:w-3/4 bg-[#4f4f4f] border-t-4 border-r-4 border-b-4 border-l-4 border-t-[#585858] border-r-[#585858] border-b-[#1b1b1b] border-l-[#1b1b1b] p-10">
         {companies.map((company, idx) => (
           <div>
-            <div key={idx} className="flex flex-row">
+            <div key={idx} className="flex flex-row border-t-4 border-r-4 border-b-4 border-l-4 border-b-[#585858] border-l-[#585858] border-t-[#1b1b1b] border-r-[#1b1b1b]">
               <h3 className="text-xs sm:text-xl md:text-2xl lg:text-5xl font-bold">{company.name}</h3>
             </div>
             <div
