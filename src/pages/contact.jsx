@@ -1,90 +1,82 @@
+import Background from '../components/background/background';
 import { useState } from 'react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
 
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate form submission
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ name: '', email: '', message: '' });
-    }, 3000); // reset after 3s
+    }, 3000);
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 to-purple-100 p-4">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white shadow-lg rounded-xl p-8 w-full max-w-lg space-y-6 transition-all"
-      >
-        <h2 className="text-3xl font-bold text-gray-800 text-center">Contact Me</h2>
+    <div className="relative h-screen w-screen overflow-hidden">
+      <Background />
 
-        {submitted ? (
-          <div className="text-green-600 font-semibold text-center">
-            🎉 Message Sent! Thank you.
-          </div>
-        ) : (
-          <>
-            <div>
-              <label className="block text-gray-700 mb-1">Name</label>
+      <div className={`absolute top-0 left-0 w-full h-full flex justify-center items-center z-20 font-micro`}>
+        <div className="flex flex-col gap-4 items-center text-white w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 bg-[#4f4f4f] border-t-4 border-r-4 border-b-4 border-l-4 border-t-[#585858] border-r-[#585858] border-b-[#1b1b1b] border-l-[#1b1b1b] p-6 sm:p-10 md:p-14 rounded-xl">
+          
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">GET IN TOUCH</h1>
+          <h2 className="text-sm sm:text-lg md:text-xl text-center mb-2">Feel free to message me about anything!</h2>
+
+          {submitted ? (
+            <p className="text-green-300 text-lg">✅ Message Sent!</p>
+          ) : (
+            <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
               <input
                 type="text"
                 name="name"
+                placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                className="w-full p-2 rounded bg-[#333] text-white border-b-2 border-[#888] focus:outline-none focus:ring-2 focus:ring-[#aaa]"
               />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 mb-1">Email</label>
               <input
                 type="email"
                 name="email"
+                placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                className="w-full p-2 rounded bg-[#333] text-white border-b-2 border-[#888] focus:outline-none focus:ring-2 focus:ring-[#aaa]"
               />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 mb-1">Message</label>
               <textarea
                 name="message"
-                rows="4"
+                placeholder="Your Message"
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-300"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition"
-            >
-              Send
-            </button>
-          </>
-        )}
-      </form>
+                rows="5"
+                className="w-full p-2 rounded bg-[#333] text-white border-b-2 border-[#888] focus:outline-none focus:ring-2 focus:ring-[#aaa]"
+              ></textarea>
+              <button
+                type="submit"
+                className="w-full bg-[#888] hover:bg-[#aaa] text-black py-2 rounded transition duration-300 font-bold"
+              >
+                Send
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
