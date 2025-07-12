@@ -32,20 +32,17 @@ export default function Works({ showDay }) {
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold text-center -mb-2 sm:-mb-4 md:-mb-6 lg:-mb-8">MY PREV COMPANIES</h1>
       <h2 className="text-md sm:text-2xl md:text-4xl lg:text-5xl text-center mb-[5%]">Here are some of the companies where I have worked.</h2>
 
-      <div className="flex flex-col gap-2 sm:gap-3 md:gap-6 items-center text-white w-8/9 sm:w-1/2 md:w-3/4 bg-[#4f4f4f] border-t-4 border-r-4 border-b-4 border-l-4 border-t-[#585858] border-r-[#585858] border-b-[#1b1b1b] border-l-[#1b1b1b] p-10">
+      <div className="flex gap-2 sm:gap-3 md:gap-6 items-center text-white w-8/9 sm:w-1/2 md:w-3/4">
         {companies.map((company, idx) => (
-          <div>
-            <div key={idx} className="flex flex-row border-t-4 border-r-4 border-b-4 border-l-4 border-b-[#585858] border-l-[#585858] border-t-[#1b1b1b] border-r-[#1b1b1b]">
-              <h3 className="text-xs sm:text-xl md:text-2xl lg:text-5xl font-bold">{company.name}</h3>
-            </div>
+          <div
+            key={idx}
+            className="flex flex-col items-center text-center bg-[#4f4f4f] border-t-4 border-r-4 border-b-4 border-l-4 border-t-[#585858] border-r-[#585858] border-b-[#1b1b1b] border-l-[#1b1b1b] p-2 sm:p-4 md:p-6 lg:p-8 rounded-s max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl w-full">
+            <img src={company.logo} alt={company.name} className="w-20 sm:w-40 h-20 sm:h-40 object-contain mb-4 overflow-hidden duration-300 hover:scale-125" />
+            <h3 className="text-xs sm:text-xl md:text-2xl lg:text-5xl font-bold">{company.name}</h3>
+            <h4 className="text-xs sm:text-xl md:text-2xl lg:text-3xl">{company.position}</h4>
+            <p className="text-xs sm:text-xl md:text-2xl lg:text-3xl mb-1 text-[#aaa]">{company.period}</p>
           </div>
         ))}
-        <div className="flex items-center text-center bg-[#222]/40 border-t-4 border-r-4 border-b-4 border-l-4 border-b-[#585858] border-l-[#585858] border-t-[#1b1b1b] border-r-[#1b1b1b] p-2 sm:p-4 md:p-6 lg:p-8 rounded-s max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl w-full">
-          <img src="" alt="" className="w-20 sm:w-40 h-20 sm:h-40 object-contain mb-4 overflow-hidden duration-300 hover:scale-125" />
-          <h3 className="text-xs sm:text-xl md:text-2xl lg:text-5xl font-bold">Company</h3>
-          <h4 className="text-xs sm:text-xl md:text-2xl lg:text-3xl">Posotion</h4>
-          <p className="text-xs sm:text-xl md:text-2xl lg:text-3xl mb-1 text-[#aaa]">2xxx-2xxx</p>
-        </div>
       </div>
     </div>
   );
