@@ -22,18 +22,16 @@ export default function Navbar({ showDay }) {
         ARIEL SHARON
       </span>
 
-      <a 
-        href="https://www.instagram.com/ariel_sharon31/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="w-13 h-13 sm:w-13 sm:h-13 md:w-14 md:h-14 lg:w-18 lg:h-18"
+      <div
+        onClick={() => navigate('/contact')}
+        className="cursor-pointer w-13 h-13 sm:w-13 sm:h-13 md:w-14 md:h-14 lg:w-18 lg:h-18"
       >
         <img 
           src={Contact} 
           alt="Contact" 
           className="w-full h-full hover:brightness-60 transition duration-300 ease-in-out" 
         />
-      </a>
+      </div>
     </nav>
   );
 }
